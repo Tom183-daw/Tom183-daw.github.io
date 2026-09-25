@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../resources/CiudadFuturistaVioleta.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.titulo-principal {
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+}
+/* --- Carrusel --- */
+
+.carrusel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.carrusel {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    perspective: 1500px; /* da profundidad al espacio 3D */
+}
+
+.carrusel-anillo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; /* las tarjetas hijas viven en 3D */
+    transition: transform 0.6s ease;
+}
+
+.tarjeta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 350px;
+    background: #d9d9d9;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    backface-visibility: hidden; /* oculta la cara trasera al girar */
+}
+
+.tarjeta h3 {
+    margin: 0 0 15px 0;
+    font-size: 32px;
+}
+
+.tarjeta ul {
+    margin: 0;
+    padding-left: 25px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.controles {
+    margin-top: 30px;
+}
+
+.controles button {
+    font-size: 28px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #6a1b9a;
+    color: white;
+    cursor: pointer;
+    margin: 0 12px;
+}
+
+.controles button:hover {
+    background: #8e24aa;
+}
+/* --- Carrusel 
+
+.carrusel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.carrusel {
+    position: relative;
+    width: 400px;
+    height: 260px;
+}
+
+.tarjeta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 220px;
+    background: #d9d9d9;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.tarjeta h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+.tarjeta ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.tarjeta.activa {
+    transform: translate(0, 40px) scale(1.1);
+    z-index: 10;
+    opacity: 1;
+}
+
+.tarjeta.pos-1 { transform: translate(30px, 20px) scale(1); z-index: 9; opacity: 0.9; }
+.tarjeta.pos-2 { transform: translate(60px, 0px) scale(0.9); z-index: 8; opacity: 0.7; }
+.tarjeta.pos-3 { transform: translate(90px, -20px) scale(0.8); z-index: 7; opacity: 0.5; }
+.tarjeta.pos-4 { transform: translate(-30px, 20px) scale(1); z-index: 9; opacity: 0.9; }
+.tarjeta.pos-5 { transform: translate(-60px, 0px) scale(0.9); z-index: 8; opacity: 0.7; }
+
+.controles {
+    margin-top: 20px;
+}
+
+.controles button {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #6a1b9a;
+    color: white;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.controles button:hover {
+    background: #8e24aa;
+}
+--- */

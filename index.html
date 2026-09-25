@@ -1,5 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Interfaces Web</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h2 class="titulo-principal">Mi primera página</h2>
+    </header>
+
+    <main>
+        <section class="carrusel-container">
+            <div class="carrusel" id="carrusel">
+                <div class="carrusel-anillo" id="carruselAnillo">
+                    <article class="tarjeta" data-index="0">
+                        <h3>Tema 1</h3>
+                        <ul>
+                            <li>Cuaderno</li>
+                            <li>Plantilla</li>
+                            <li>Etc..</li>
+                        </ul>
+                    </article>
+                    <article class="tarjeta" data-index="1">
+                        <h3>Tema 2</h3>
+                        <ul>
+                            <li>Cuaderno</li>
+                            <li>Plantilla</li>
+                            <li>Etc..</li>
+                        </ul>
+                    </article>
+                    <article class="tarjeta" data-index="2">
+                        <h3>Tema 3</h3>
+                        <ul>
+                            <li>Cuaderno</li>
+                            <li>Plantilla</li>
+                            <li>Etc..</li>
+                        </ul>
+                    </article>
+                    <article class="tarjeta" data-index="3">
+                        <h3>Tema 4</h3>
+                        <ul>
+                            <li>Cuaderno</li>
+                            <li>Plantilla</li>
+                            <li>Etc..</li>
+                        </ul>
+                    </article>
+                    <article class="tarjeta" data-index="4">
+                        <h3>Tema 5</h3>
+                        <ul>
+                            <li>Cuaderno</li>
+                            <li>Plantilla</li>
+                            <li>Etc..</li>
+                        </ul>
+                    </article>
+                    <article class="tarjeta" data-index="5">
+                        <h3>Tema 6</h3>
+                        <ul>
+                            <li>Cuaderno</li>
+                            <li>Plantilla</li>
+                            <li>Etc..</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+            
+            <div class="controles">
+                <button id="btnAnterior" aria-label="Tema anterior">‹</button>
+                <button id="btnSiguiente" aria-label="Tema siguiente">›</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/carrusel.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="es">
 
 <style>
 
@@ -9,8 +99,9 @@
     }
 
     body{
-    
-    background-image: url(./resources/backgroundCity.jpg);
+    min-height: 100vh;
+    margin: 0;
+    background-image: url(./resources/CiudadFuturistaVioleta.png);
     background-size: cover;       /* cubre todo el espacio disponible */
     background-position: center;  /* centra la imagen */
     background-repeat: no-repeat;
@@ -25,7 +116,8 @@
     <title>Diseño de Interfaces Web</title>
 </head>
 <body>
-    <header><h2>Mi primera página</h2></header>
+    <header><h2 style="font-size: 50px; color: aliceblue;">Mi primera página</h2></header>
     
 </body>
 </html>
+-->
