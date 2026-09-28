@@ -1,0 +1,68 @@
+/* ===== Guía de estilos · base #3D0262 ===== */
+/* Añade en el <head>:
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css"> */
+
+:root {
+  /* Morado */
+  --p950: #190128; --p900: #3D0262; --p700: #5D0891; --p600: #7A0FBD;
+  --p500: #A036E2; --p400: #C271F4; --p200: #E1B6FB; --p50: #F5E7FE;
+  /* Acentos */
+  --lime: #6BD926; --indigo: #2C17CF; --magenta: #CF17B9;
+  /* Tema claro */
+  --bg: #F7F4FA; --surface: #FFFFFF; --text: #1E1425; --muted: #6B6274;
+  --border: #E1B6FB; --heading: #3D0262; --link: #5D0891;
+  /* Fuentes */
+  --f-title: 'Orbitron', 'Segoe UI', system-ui, sans-serif;
+  --f-sub: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+  --f-body: 'Aptos', 'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --f-code: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  /* Forma */
+  --radius: 10px; --radius-lg: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12081A; --surface: #1E1028; --text: #F1E9F7; --muted: #B5A6C2;
+    --border: #3D0262; --heading: #E1B6FB; --link: #C271F4;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #12081A; --surface: #1E1028; --text: #F1E9F7; --muted: #B5A6C2;
+  --border: #3D0262; --heading: #E1B6FB; --link: #C271F4;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--f-body); font-size: 1rem; line-height: 1.6; }
+a { color: var(--link); }
+code { font-family: var(--f-code); font-size: .85rem; }
+
+/* Títulos: Orbitron · Subtítulos: Montserrat */
+h1 { font-family: var(--f-title); font-weight: 900; font-size: 2.4rem; line-height: 1.15; color: var(--heading); }
+h2 { font-family: var(--f-title); font-weight: 700; font-size: 1.9rem; color: var(--heading); }
+h3 { font-family: var(--f-sub); font-weight: 700; font-size: 1.3rem; color: var(--heading); }
+h4 { font-family: var(--f-sub); font-weight: 600; font-size: 1.05rem; color: var(--heading); }
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px; }
+
+/* Botones */
+.btn { font-family: var(--f-sub); font-weight: 600; font-size: .95rem; padding: 11px 22px; border-radius: var(--radius); border: 2px solid transparent; cursor: pointer; transition: transform .15s, background .15s; }
+.btn:hover { transform: translateY(-1px); }
+.btn:focus-visible, input:focus-visible { outline: 3px solid var(--p400); outline-offset: 2px; }
+.btn-primary { background: var(--p600); color: #fff; }
+.btn-primary:hover { background: var(--p700); }
+.btn-secondary { background: transparent; color: var(--link); border-color: var(--p500); }
+.btn-accent { background: var(--lime); color: #14300A; }
+.btn-ghost { background: transparent; color: var(--link); }
+
+/* Formularios */
+label { font-family: var(--f-sub); font-weight: 600; font-size: .85rem; }
+input { width: 100%; padding: 11px 14px; border-radius: var(--radius); border: 1.5px solid var(--p200); background: var(--surface); color: var(--text); font: inherit; margin-top: 4px; }
+input:focus { border-color: var(--p500); }
+
+/* Alertas */
+.alert { padding: 12px 16px; border-radius: var(--radius); border-left: 5px solid; font-size: .92rem; }
+.alert-ok { background: #EAF9DF; border-color: var(--lime); color: #1B3A0C; }
+.alert-info { background: #E6E3FB; border-color: var(--indigo); color: #150B70; }
+.alert-highlight { background: #FBE0F7; border-color: var(--magenta); color: #5A0650; }

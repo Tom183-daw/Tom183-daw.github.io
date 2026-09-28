@@ -6,18 +6,31 @@ html, body {
 body {
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("../resources/CiudadFuturistaVioleta.png");
+    /*font-family: Arial, sans-serif;*/
+    background-image: url("../resources/Fondo3.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+/*
 .titulo-principal {
     font-size: 50px;
     color: aliceblue;
     text-align: center;
+}*/
+.titulo-principal {
+    font-family: var(--f-title);   /* Orbitron, la variable de la guía */
+    font-weight: 900;
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.titulo-principal a {
+    color: inherit;          /* hereda el aliceblue en vez del morado de los enlaces */
+    text-decoration: none;   /* quita el subrayado */
+    font-family: inherit;
 }
 /* --- Carrusel --- */
 

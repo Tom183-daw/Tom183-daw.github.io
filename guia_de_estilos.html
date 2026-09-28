@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guía de estilos · #3D0262</title>
+<link rel="stylesheet" href="./css/styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --p950:#190128;--p900:#3D0262;--p700:#5D0891;--p600:#7A0FBD;--p500:#A036E2;--p400:#C271F4;--p200:#E1B6FB;--p50:#F5E7FE;
+  --lime:#6BD926;--indigo:#2C17CF;--magenta:#CF17B9;
+  --bg:#F7F4FA;--surface:#FFFFFF;--text:#1E1425;--muted:#6B6274;--border:#E1B6FB;--heading:#3D0262;--link:#5D0891;
+  --f-title:'Orbitron','Segoe UI',system-ui,sans-serif;
+  --f-sub:'Montserrat','Segoe UI',system-ui,sans-serif;
+  --f-body:'Aptos','Segoe UI Variable','Segoe UI',system-ui,-apple-system,sans-serif;
+  --f-code:'JetBrains Mono',ui-monospace,Consolas,monospace;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12081A;--surface:#1E1028;--text:#F1E9F7;--muted:#B5A6C2;--border:#3D0262;--heading:#E1B6FB;--link:#C271F4}}
+:root[data-theme="dark"]{--bg:#12081A;--surface:#1E1028;--text:#F1E9F7;--muted:#B5A6C2;--border:#3D0262;--heading:#E1B6FB;--link:#C271F4}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-body);font-size:1rem;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.hero{background:linear-gradient(135deg,var(--p950),var(--p900) 60%,var(--p700));color:#fff;padding:64px 0 56px}
+.hero h1{font-family:var(--f-title);font-weight:900;font-size:clamp(2rem,6vw,3.4rem);margin:0 0 12px;letter-spacing:.02em}
+.hero p{font-family:var(--f-sub);font-weight:500;font-size:1.15rem;margin:0;color:var(--p200);max-width:560px}
+section{padding:44px 0 8px}
+h2{font-family:var(--f-title);font-weight:700;font-size:1.6rem;color:var(--heading);margin:0 0 8px}
+h3{font-family:var(--f-sub);font-weight:600;font-size:1.1rem;color:var(--heading);margin:28px 0 10px}
+p.lead{color:var(--muted);margin:0 0 20px}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(130px,1fr))}
+.sw{border-radius:12px;overflow:hidden;background:var(--surface);border:1px solid var(--border);font-size:.8rem}
+.sw i{display:block;height:64px}
+.sw div{padding:8px 10px}.sw b{display:block;font-family:var(--f-sub);font-size:.8rem}
+code,.mono{font-family:var(--f-code);font-size:.8rem;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px}
+.specimen{display:grid;gap:14px}
+.spec{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;border-bottom:1px solid var(--border);padding-bottom:12px}
+.spec .tag{font-family:var(--f-code);font-size:.75rem;color:var(--muted);min-width:170px}
+.t-h1{font-family:var(--f-title);font-weight:900;font-size:2.4rem;line-height:1.15;color:var(--heading)}
+.t-h2{font-family:var(--f-title);font-weight:700;font-size:1.7rem;color:var(--heading)}
+.t-h3{font-family:var(--f-sub);font-weight:700;font-size:1.3rem;color:var(--heading)}
+.t-h4{font-family:var(--f-sub);font-weight:600;font-size:1.05rem;color:var(--heading)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--f-sub);font-weight:600;font-size:.95rem;padding:11px 22px;border-radius:10px;border:2px solid transparent;cursor:pointer;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn:focus-visible,input:focus-visible{outline:3px solid var(--p400);outline-offset:2px}
+.b1{background:var(--p600);color:#fff}.b1:hover{background:var(--p700)}
+.b2{background:transparent;color:var(--link);border-color:var(--p500)}
+.b3{background:var(--lime);color:#14300A}
+.b4{background:transparent;color:var(--link)}
+.form{display:grid;gap:12px;max-width:380px}
+label{font-family:var(--f-sub);font-weight:600;font-size:.85rem}
+input{width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid var(--p200);background:var(--surface);color:var(--text);font:inherit;margin-top:4px}
+input:focus{border-color:var(--p500)}
+.alerts{display:grid;gap:10px}
+.al{padding:12px 16px;border-radius:10px;border-left:5px solid;font-size:.92rem}
+.ok{background:#EAF9DF;border-color:var(--lime);color:#1B3A0C}
+.info{background:#E6E3FB;border-color:var(--indigo);color:#150B70}
+.hl{background:#FBE0F7;border-color:var(--magenta);color:#5A0650}
+.cols{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--border)}
+th{font-family:var(--f-sub);color:var(--heading)}
+ul.rules{margin:0;padding-left:20px}
+footer{margin-top:56px;padding:28px 0;background:var(--p950);color:var(--p200);text-align:center;font-family:var(--f-sub);font-size:.85rem}
+a{color:var(--link)}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+  <h2 class="titulo-principal"> <a href="./index.html" class="titulo-principal">Diseño de Interfaces Web</a></h2><br><br>
+  <h1>GUÍA DE ESTILOS</h1>
+  <p>Sistema visual para la web basado en el morado #3D0262, con Orbitron, Montserrat y Aptos.</p>
+</div></header>
+
+<main class="wrap">
+
+<section>
+  <h2>1. Color</h2>
+  <p class="lead">Morado dominante, acentos con moderación (regla 60-30-10: 60% neutros, 30% morado, 10% acentos).</p>
+  <h3>Escala primaria</h3>
+  <div class="grid">
+    <div class="sw"><i style="background:#190128"></i><div><b>950</b><code>#190128</code></div></div>
+    <div class="sw"><i style="background:#3D0262"></i><div><b>900 · Base</b><code>#3D0262</code></div></div>
+    <div class="sw"><i style="background:#5D0891"></i><div><b>700</b><code>#5D0891</code></div></div>
+    <div class="sw"><i style="background:#7A0FBD"></i><div><b>600</b><code>#7A0FBD</code></div></div>
+    <div class="sw"><i style="background:#A036E2"></i><div><b>500</b><code>#A036E2</code></div></div>
+    <div class="sw"><i style="background:#C271F4"></i><div><b>400</b><code>#C271F4</code></div></div>
+    <div class="sw"><i style="background:#E1B6FB"></i><div><b>200</b><code>#E1B6FB</code></div></div>
+    <div class="sw"><i style="background:#F5E7FE"></i><div><b>50</b><code>#F5E7FE</code></div></div>
+  </div>
+  <h3>Acentos y neutros</h3>
+  <div class="grid">
+    <div class="sw"><i style="background:#6BD926"></i><div><b>Lima · éxito / CTA</b><code>#6BD926</code></div></div>
+    <div class="sw"><i style="background:#2C17CF"></i><div><b>Índigo · info</b><code>#2C17CF</code></div></div>
+    <div class="sw"><i style="background:#CF17B9"></i><div><b>Magenta · destacado</b><code>#CF17B9</code></div></div>
+    <div class="sw"><i style="background:#F7F4FA"></i><div><b>Fondo</b><code>#F7F4FA</code></div></div>
+    <div class="sw"><i style="background:#1E1425"></i><div><b>Texto</b><code>#1E1425</code></div></div>
+    <div class="sw"><i style="background:#6B6274"></i><div><b>Texto secundario</b><code>#6B6274</code></div></div>
+  </div>
+  <h3>Combinaciones accesibles</h3>
+  <div class="card scroll"><table>
+    <tr><th>Texto</th><th>Fondo</th><th>Uso</th></tr>
+    <tr><td>Blanco</td><td>#3D0262 / #5D0891 / #7A0FBD</td><td>Cabeceras, botón primario (contraste alto)</td></tr>
+    <tr><td>Blanco</td><td>#A036E2</td><td>Ok para texto grande y botones (≈5:1)</td></tr>
+    <tr><td>#14300A</td><td>#6BD926</td><td>Botón de acción destacada</td></tr>
+    <tr><td>#1E1425</td><td>#F7F4FA / #F5E7FE</td><td>Texto de lectura</td></tr>
+  </table></div>
+</section>
+
+<section>
+  <h2>2. Tipografía</h2>
+  <p class="lead">Tres fuentes, tres roles. Nunca mezcles los roles: Orbitron solo en títulos.</p>
+  <div class="cols">
+    <div class="card"><div class="t-h2" style="font-size:1.5rem">Orbitron</div><p class="mono">Títulos (H1, H2) · 700 / 900</p><p>Futurista y geométrica. Muy ancha: úsala en titulares cortos y evita párrafos.</p></div>
+    <div class="card"><div class="t-h3">Montserrat</div><p class="mono">Subtítulos (H3, H4), botones, etiquetas · 500-700</p><p>Sans geométrica muy legible; hace de puente entre Orbitron y el texto.</p></div>
+    <div class="card"><div style="font-size:1.3rem;font-weight:600">Aptos</div><p class="mono">Texto corrido, formularios · 400 / 600</p><p>Fuente de Microsoft, cómoda para leer párrafos largos.</p></div>
+  </div>
+  <h3>Jerarquía</h3>
+  <div class="card specimen">
+    <div class="spec"><span class="tag">H1 · Orbitron 900 · 2.4rem</span><span class="t-h1">Título principal</span></div>
+    <div class="spec"><span class="tag">H2 · Orbitron 700 · 1.7rem</span><span class="t-h2">Título de sección</span></div>
+    <div class="spec"><span class="tag">H3 · Montserrat 700 · 1.3rem</span><span class="t-h3">Subtítulo de bloque</span></div>
+    <div class="spec"><span class="tag">H4 · Montserrat 600 · 1.05rem</span><span class="t-h4">Subtítulo menor</span></div>
+    <div class="spec"><span class="tag">Cuerpo · Aptos 400 · 1rem / 1.6</span><span>Este es un texto de párrafo. Mantén líneas de 60-75 caracteres para leer cómodo.</span></div>
+    <div class="spec"><span class="tag">Código · JetBrains Mono · .85rem</span><code>const color = "#3D0262";</code></div>
+  </div>
+  <h3>Nota sobre Aptos</h3>
+  <p class="lead">Aptos no está en Google Fonts: solo se ve si el usuario la tiene instalada (Windows 11 / Microsoft 365). Por eso el stack incluye <code>Segoe UI</code> y <code>system-ui</code> como respaldo. Si necesitas que se vea igual para todos, usa <code>@font-face</code> con un archivo con licencia o cambia a <b>Inter</b> o <b>Open Sans</b>, muy parecidas.</p>
+</section>
+
+<section>
+  <h2>3. Componentes</h2>
+  <h3>Botones</h3>
+  <div class="btns">
+    <button class="btn b1">Primario</button>
+    <button class="btn b2">Secundario</button>
+    <button class="btn b3">Acción destacada</button>
+    <button class="btn b4">Terciario</button>
+  </div>
+  <h3>Formulario</h3>
+  <div class="card form">
+    <div><label for="n">Nombre</label><input id="n" placeholder="Tu nombre"></div>
+    <div><label for="e">Correo</label><input id="e" type="email" placeholder="tu@correo.com"></div>
+    <button class="btn b1" type="button">Enviar</button>
+  </div>
+  <h3>Alertas</h3>
+  <div class="alerts">
+    <div class="al ok"><b>Éxito:</b> los cambios se han guardado.</div>
+    <div class="al info"><b>Info:</b> hay una nueva versión disponible.</div>
+    <div class="al hl"><b>Destacado:</b> oferta limitada esta semana.</div>
+  </div>
+</section>
+
+<section>
+  <h2>4. Espaciado y forma</h2>
+  <div class="card scroll"><table>
+    <tr><th>Elemento</th><th>Valor</th></tr>
+    <tr><td>Escala de espaciado</td><td>4 · 8 · 12 · 16 · 24 · 32 · 48 · 64 px</td></tr>
+    <tr><td>Radio de botones e inputs</td><td>10 px</td></tr>
+    <tr><td>Radio de tarjetas</td><td>16 px</td></tr>
+    <tr><td>Bordes</td><td>1 px <code>#E1B6FB</code></td></tr>
+    <tr><td>Ancho máximo de contenido</td><td>960 px</td></tr>
+    <tr><td>Breakpoints</td><td>640 · 900 · 1200 px</td></tr>
+  </table></div>
+  <h3>Buenas prácticas</h3>
+  <div class="card"><ul class="rules">
+    <li>Un solo botón primario por vista; el lima, solo para la acción principal.</li>
+    <li>Orbitron con <code>letter-spacing</code> ligero y nunca en párrafos.</li>
+    <li>Foco visible siempre (anillo <code>#C271F4</code>).</li>
+    <li>No uses texto morado claro sobre fondos claros: mira la tabla de contraste.</li>
+  </ul></div>
+</section>
+
+</main>
+<footer>Guía de estilos · base #3D0262 · Orbitron / Montserrat / Aptos</footer>
+</body>
+</html>
