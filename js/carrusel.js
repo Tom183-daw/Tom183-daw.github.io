@@ -13,7 +13,7 @@ function inicializarCarrusel() {
 
     // Radio del círculo: cuanto más grande, más "abierto" se ve el giro.
     // Lo calculamos a partir del ancho de la tarjeta para que no se solapen.
-    const anchoTarjeta = 500;
+    const anchoTarjeta = 450;
     const radio = Math.round((anchoTarjeta / 2) / Math.tan(Math.PI / total));
 
     let indiceActivo = 0;
