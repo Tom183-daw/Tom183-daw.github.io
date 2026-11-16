@@ -330,7 +330,8 @@ h4 {
 
     .carrusel {
         width: 65vw;
-        height: 25vh;
+        height: auto;
+        aspect-ratio: 4 / 3;
     }
 
     .tarjeta {
