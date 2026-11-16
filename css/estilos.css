@@ -1,0 +1,413 @@
+:root {
+    --p950: #190128;
+    --p900: #3D0262;
+    --p700: #5D0891;
+    --p600: #7A0FBD;
+    --p500: #A036E2;
+    --p400: #C271F4;
+    --p200: #E1B6FB;
+    --p50: #F5E7FE;
+    --lime: #6BD926;
+    --indigo: #2C17CF;
+    --magenta: #CF17B9;
+    --text: #1E1425;
+    --muted: #6B6274;
+    --heading: #3D0262;
+    --link: #5D0891;
+    --f-title: 'Orbitron', 'Segoe UI', system-ui, sans-serif;
+    --f-sub: 'Montserrat', 'Segoe UI', system-ui, sans-serif;
+    --f-body: 'Aptos', 'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --radius: 10px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: var(--text);
+    font-family: var(--f-body);
+    font-size: 1rem;
+    line-height: 1.6;
+    background-image: url("../resources/Fondo3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    color: var(--link);
+}
+
+h1 {
+    font-family: var(--f-title);
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 1.15;
+    color: var(--heading);
+}
+
+h2 {
+    font-family: var(--f-title);
+    font-weight: 700;
+    font-size: 1.9rem;
+    color: var(--heading);
+}
+
+h3 {
+    font-family: var(--f-sub);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--heading);
+}
+
+h4 {
+    font-family: var(--f-sub);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--heading);
+}
+
+.titulo-principal {
+    font-family: var(--f-title);
+    font-weight: 900;
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.titulo-principal a {
+    color: inherit;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.carrusel-container {
+    height: 66vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel {
+    position: relative;
+    width: 40vw;
+    height: 45vh;
+    perspective: 1500px;
+}
+
+.carrusel-anillo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.tarjeta {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2vw;
+    cursor: pointer;
+    backface-visibility: hidden;
+    background: linear-gradient(
+        160deg,
+        rgba(160, 54, 226, 0.15) 0%,
+        rgba(61, 2, 98, 0.35) 60%,
+        rgba(44, 23, 207, 0.15) 100%
+    );
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid var(--p400);
+    border-radius: 12px;
+    box-shadow:
+        0 0 20px rgba(160, 54, 226, 0.5),
+        0 0 40px rgba(160, 54, 226, 0.2),
+        inset 0 0 25px rgba(194, 113, 244, 0.15);
+    color: var(--p50);
+    text-shadow: 0 0 6px rgba(194, 113, 244, 0.6);
+    animation: pulso-holograma 3s ease-in-out infinite;
+}
+
+.tarjeta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+}
+
+.tarjeta h2 {
+    font-size: 2vw;
+    color: var(--p200);
+}
+
+.tarjeta ul {
+    margin: 0;
+    padding-left: 25px;
+    line-height: 1.6;
+    font-family: var(--f-body);
+}
+
+.tarjeta li {
+    font-size: 2vw;
+}
+
+.tarjeta li::marker {
+    color: var(--lime);
+}
+
+@keyframes pulso-holograma {
+    0%, 100% {
+        box-shadow:
+            0 0 20px rgba(160, 54, 226, 0.5),
+            0 0 40px rgba(160, 54, 226, 0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 30px rgba(160, 54, 226, 0.8),
+            0 0 55px rgba(160, 54, 226, 0.35);
+    }
+}
+
+.pantalla {
+    position: relative;
+    background: linear-gradient(
+        160deg,
+        rgba(160, 54, 226, 0.15) 0%,
+        rgba(61, 2, 98, 0.35) 60%,
+        rgba(44, 23, 207, 0.15) 100%
+    );
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid var(--p400);
+    border-radius: 12px;
+    box-shadow:
+        0 0 20px rgba(160, 54, 226, 0.5),
+        0 0 40px rgba(160, 54, 226, 0.2),
+        inset 0 0 25px rgba(194, 113, 244, 0.15);
+    animation: pulso-holograma 3s ease-in-out infinite;
+}
+
+.pantalla::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.03) 0px,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+}
+
+.cabecera,
+.cabecera::after {
+    border-radius: 0;
+}
+
+.cabecera {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 10px 0;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 30px;
+    color: var(--p50);
+}
+
+.info-bloque {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.info-bloque + .info-bloque {
+    border-left: 3px solid var(--p500);
+    padding-left: 24px;
+}
+
+.info p {
+    margin: 0;
+    text-shadow: 0 1px 4px black;
+}
+
+.info strong {
+    color: white;
+}
+
+.info img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.pie {
+    background: var(--p950);
+    border-top: 2px solid var(--p600);
+    color: var(--p200);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.pie p {
+    margin: 0;
+}
+
+.pie a {
+    color: var(--p400);
+}
+
+.capa-expansion {
+    position: fixed;
+    z-index: 100;
+    border: 1px solid var(--p400);
+    border-radius: 12px;
+    background-color: rgba(61, 2, 98, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 0 30px rgba(160, 54, 226, 0.8);
+    transition: top 0.6s ease, left 0.6s ease, width 0.6s ease, height 0.6s ease,
+                border-radius 0.6s ease, background-color 0.6s ease;
+}
+
+.capa-expansion.expandida {
+    border-radius: 0;
+    background-color: rgba(25, 1, 40, 0.75);
+}
+
+.navegacion {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    html, body {
+        overflow-x: clip;
+    }
+
+    header {
+        border-bottom: 2px solid var(--p200);
+    }
+
+    .titulo-principal {
+        font-size: 36px;
+        margin: 20px 0 10px;
+    }
+
+    .carrusel-container {
+        height: auto;
+        padding: 30px 0;
+    }
+
+    .carrusel {
+        width: 65vw;
+        height: 25vh;
+    }
+
+    .tarjeta {
+        padding: 5vw;
+    }
+
+    .tarjeta h2 {
+        font-size: 6vw;
+    }
+
+    .tarjeta li {
+        font-size: 4vw;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 20px;
+        margin: 0 15px 30px;
+    }
+
+    .info::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 50%;
+        width: 4px;
+        background: var(--p600);
+    }
+
+    .info-bloque {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .info-bloque + .info-bloque {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .info-bloque:nth-child(odd) img {
+        order: -1;
+    }
+
+    .info-bloque:nth-child(even) img {
+        order: 1;
+    }
+
+    .navegacion + .pie {
+        padding-bottom: 90px;
+    }
+
+    .navegacion {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        font-family: var(--f-title);
+        font-weight: 900;
+        font-size: 22px;
+        color: white;
+        text-shadow: 0 0 8px black;
+    }
+
+    .boton-menu {
+        width: 50px;
+        height: 50px;
+        border: 2px solid var(--p400);
+        border-radius: 6px;
+        background: var(--p700);
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}

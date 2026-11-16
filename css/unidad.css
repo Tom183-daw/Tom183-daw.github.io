@@ -1,0 +1,217 @@
+.unidad {
+    min-height: 100vh;
+    background: linear-gradient(
+        160deg,
+        rgba(160, 54, 226, 0.25) 0%,
+        rgba(61, 2, 98, 0.55) 60%,
+        rgba(44, 23, 207, 0.25) 100%
+    );
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-top: 2px solid var(--p500);
+    color: var(--p50);
+    animation: aparecer 0.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.barra-unidad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: linear-gradient(90deg, var(--p700), var(--p900));
+    color: var(--p50);
+    font-family: var(--f-sub);
+}
+
+.barra-unidad a {
+    color: var(--p50);
+    text-decoration: none;
+}
+
+.barra-unidad a:hover {
+    text-decoration: underline;
+}
+
+.barra-unidad strong {
+    font-weight: 600;
+}
+
+.contenido-unidad {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 24px 30px 30px;
+}
+
+.etiqueta {
+    margin: 0;
+    font-family: var(--f-sub);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--p200);
+}
+
+.principal h1 {
+    margin: 4px 0 8px;
+    font-family: var(--f-body);
+    font-weight: 400;
+    font-size: 2.6rem;
+    line-height: 1.1;
+    color: var(--p50);
+}
+
+.principal p {
+    margin: 0 0 16px;
+}
+
+.imagen-unidad {
+    width: 100%;
+    display: block;
+    border: 2px solid var(--p400);
+}
+
+.principal h2 {
+    margin: 20px 0 8px;
+    font-family: var(--f-body);
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--p50);
+}
+
+.competencias {
+    margin: 0;
+    padding-left: 20px;
+    list-style: square;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    column-gap: 30px;
+}
+
+.competencias li {
+    margin-bottom: 6px;
+}
+
+.lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cabecera-lateral {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cabecera-lateral a {
+    font-size: 0.85rem;
+    color: var(--p200);
+    text-decoration: none;
+}
+
+.tarjeta-siguiente {
+    display: block;
+    min-height: 200px;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--p400);
+    background:
+        linear-gradient(160deg, rgba(160, 54, 226, 0.45), rgba(61, 2, 98, 0.55)),
+        url("../resources/backgroundCity.jpg");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(160, 54, 226, 0.5);
+    color: var(--p50);
+    text-decoration: none;
+    text-shadow: 0 0 6px rgba(194, 113, 244, 0.6);
+}
+
+.tarjeta-siguiente h3 {
+    margin: 0 0 12px;
+    font-family: var(--f-title);
+    font-size: 1.8rem;
+    color: var(--p200);
+}
+
+.tarjeta-siguiente ul {
+    margin: 0;
+    padding-left: 22px;
+    font-size: 1.1rem;
+}
+
+.tarjeta-siguiente li::marker {
+    color: var(--lime);
+}
+
+.boton-tema {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1.5px solid var(--p950);
+    border-radius: var(--radius);
+    background: linear-gradient(90deg, var(--p400), var(--p600));
+    color: var(--p950);
+    text-decoration: none;
+    transition: transform 0.15s;
+}
+
+.boton-tema:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, var(--p500), var(--p700));
+    color: var(--p50);
+}
+
+.icono {
+    font-size: 1.2rem;
+}
+
+.conceptos {
+    grid-column: 1 / 3;
+}
+
+.conceptos h3 {
+    margin: 0 0 10px;
+    font-family: var(--f-sub);
+    font-size: 1rem;
+    color: var(--p50);
+}
+
+.conceptos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
+}
+
+@media (max-width: 800px) {
+    .contenido-unidad {
+        grid-template-columns: 1fr;
+    }
+
+    .conceptos {
+        grid-column: auto;
+    }
+
+    .conceptos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .competencias {
+        grid-template-rows: none;
+        grid-auto-flow: row;
+    }
+}

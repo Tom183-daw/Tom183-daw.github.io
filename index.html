@@ -2,39 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño de Interfaces Web</title>
 
-    <link rel="stylesheet" href="css/guia-estilos.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
-    <header>
-        <h2 class="titulo-principal"> <a href="./index.html" class="titulo-principal">Diseño de Interfaces Web</a></h2>
+    <header class="pantalla cabecera">
+        <h2 class="titulo-principal"><a href="./index.html">Diseño de Interfaces Web</a></h2>
     </header>
 
     <main>
         <section class="carrusel-container">
             <div class="carrusel" id="carrusel">
                 <div class="carrusel-anillo" id="carruselAnillo">
-                    <article class="tarjeta" data-index="0">
+                    <article class="tarjeta" data-index="0" data-pagina="unidad1.html">
                         <h2>Tema 1</h2>
                         <ul>
-                            <li>Cuaderno</li>
                             <li>Plantilla</li>
-                            <li><!--<a href="./guia_de_estilos.html">-->Guía de estilos</a></li>
+                            <li>Guía de estilos</li>
+                            <li>Figma</li>
                         </ul>
                     </article>
-                    <article class="tarjeta" data-index="1">
+                    <article class="tarjeta" data-index="1" data-pagina="unidad2.html">
                         <h2>Tema 2</h2>
                         <ul>
-                            <li>Cuaderno</li>
-                            <li>Plantilla</li>
-                            <li>Etc..</li>
+                            <li>Grid y Flexbox</li>
+                            <li>Bootstrap</li>
+                            <li>Sass</li>
                         </ul>
                     </article>
                     <article class="tarjeta" data-index="2">
@@ -71,57 +68,35 @@
                     </article>
                 </div>
             </div>
-            
-            <div class="controles">
-                <button id="btnAnterior" aria-label="Tema anterior">‹</button>
-                <button id="btnSiguiente" aria-label="Tema siguiente">›</button>
-            </div>
+        </section>
+
+        <section class="info pantalla">
+            <article class="info-bloque">
+                <p><strong>Diseño adaptable:</strong> Aprenderás a crear páginas que se ven bien en cualquier dispositivo, ya sea móvil, tablet u ordenador. Usarás Flexbox, CSS Grid y media queries para que el contenido se reorganice según el tamaño de la pantalla.</p>
+                <img src="resources/Portatil.jpg" alt="Una web vista en móvil, tablet y ordenador">
+            </article>
+
+            <article class="info-bloque">
+                <img src="resources/Accessibilidad.jpg" alt="Ejemplos de buen y mal contraste de colores">
+                <p><strong>Usabilidad y accesibilidad:</strong> Descubrirás cómo hacer interfaces intuitivas y accesibles para todas las personas. Aplicarás las heurísticas de Nielsen y las pautas WCAG: contraste de colores, textos alternativos, navegación con teclado y HTML semántico.</p>
+            </article>
+
+            <article class="info-bloque">
+                <p><strong>Prototipado y CSS ordenado:</strong> Aprenderás a planificar una web antes de programarla con guías de estilo, wireframes y prototipos en Figma. Además, organizarás tu código CSS de forma limpia con BEM y Sass, para que sea fácil de mantener.</p>
+                <img src="resources/Planos.jpg" alt="Wireframe de una página web">
+            </article>
         </section>
     </main>
+
+    <nav class="navegacion">
+        <span>Navegación</span>
+        <button class="boton-menu" aria-label="Abrir menú">☰</button>
+    </nav>
+
+    <footer class="pie">
+        <p>Tomás Luna Gavela | © 2024-2025 | DIW Ciclo DAW | Contacto: <a href="mailto:emailcontacto@gmail.com">emailcontacto@gmail.com</a></p>
+    </footer>
 
     <script src="js/carrusel.js" defer></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-<!--
-<!DOCTYPE html>
-<html lang="es">
-
-<style>
-
-    html, body {
-    height: 100%;
-    margin: 0;
-    }
-
-    body{
-    min-height: 100vh;
-    margin: 0;
-    background-image: url(./resources/CiudadFuturistaVioleta.png);
-    background-size: cover;       /* cubre todo el espacio disponible */
-    background-position: center;  /* centra la imagen */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* opcional: efecto parallax al hacer scroll */
-    }
-
-</style>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseño de Interfaces Web</title>
-</head>
-<body>
-    <header><h2 style="font-size: 50px; color: aliceblue;">Mi primera página</h2></header>
-    
-</body>
-</html>
--->
